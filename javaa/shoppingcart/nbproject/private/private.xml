@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Confirm_Page.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Login.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Back.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Servlet_for_DB.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/shopping.jsp</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/ViewHistory.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Logout.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Laptop.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Hint.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Buy.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Search.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Servlets/Session.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Beans/accessDB.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/js/shopping.js</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/WEB-INF/web.xml</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/nbproject/build-impl.xml</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/login.html</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/js/login.js</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/Beans/User.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/src/java/org/json/JSONObject.java</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/js/register.js</file>
+            <file>file:/Users/zhangtian/Documents/shoppingcart/web/register.jsp</file>
+        </group>
+    </open-files>
+</project-private>

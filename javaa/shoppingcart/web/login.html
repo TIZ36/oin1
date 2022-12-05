@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Register_Page </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+        <div>
+            <form method="post" action="Back">
+                <input style="float: right" type="submit" value="back"/>
+            </form>
+        </div>
+        <div style="margin:0 auto;width: 80%" id="test">
+            <div style="margin: 0 auto;">
+                <h2> Register</h2>
+                <table style="margin: 0 auto;">
+                    <th>Account setting </th>
+                    <tr>
+                        <td>username:</td>
+                        <td><input id="name" placeholder="required" type="text" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td>password:</td>
+                        <td><input id="pwd1" placeholder="required" type="password" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td>re-input password:</td>
+                        <td><input id="pwd2" type="password" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td>reminder for password:</td>
+                        <td><input id="reminder" type="text" size="20"/></td>
+                    </tr>
+
+                    <th> User Information </th>
+                    <tr>
+                        <td>First Name:</td><td><input placeholder="required" type="text" size="20" id="fname"/></td>
+
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td><td><input  placeholder="required" type="text" size="20" id="lname"/></td>
+                    </tr>
+                    <tr>
+
+                        <td><input onclick="check(this)" checked="checked" name="sex" type="radio" value="male" />male</td>
+                        <td><input onclick="check(this)"  name="sex" type="radio" value="female" />female</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input placeholder="required" id="email" type="text" size="20" name="email"/></td>
+                    </tr>
+                    <tr>
+                        <td>address:</td>
+                        <td><input id="address" type="text" size="20" name="address"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input id="sb" type="submit" size="20" name="submit" style="float: right"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zzz.mvc.Mappers.AccountMapper">
+
+    <select id="queryAccountsBySearcher" parameterType="java.lang.String" resultType="Account">
+        SELECT *
+        FROM Accounts
+        WHERE
+        Account_name LIKE #{ss} OR Account_email LIKE #{ss}
+    </select>
+
+    <insert id="addOneAccount" parameterType="account">
+        INSERT INTO
+        Accounts (Account_email, Account_name, Account_password, Account_address)
+        VALUES
+        (#{Account_email}, #{Account_name},#{Account_password}, #{Account_address})
+    </insert>
+
+    <delete id="deleteOneAccountByEmail" parameterType="java.lang.String">
+        DELETE FROM Accounts WHERE Account_email = #{email}
+    </delete>
+
+    <update id="editAccountInfo" parameterType="account">
+        update Accounts set
+        Account_email = #{Account_email},
+        Account_name = #{Account_name},
+        Account_password = #{Account_password},
+        Account_address = #{Account_address}
+        where
+        Account_id = #{Account_id}
+    </update>
+
+    <select id="queryAccountInfoByEmail" resultType="Account">
+      select * from Accounts where Account_email = #{email}
+    </select>
+
+    <select id="queryAccountInfoById" parameterType="int" resultType="Account">
+        select * from Accounts where Account_id = #{value}
+    </select>
+
+</mapper>
+
+        <!--&lt;!&ndash; 在 sqlmapconfig 加载此mapper &ndash;&gt;-->

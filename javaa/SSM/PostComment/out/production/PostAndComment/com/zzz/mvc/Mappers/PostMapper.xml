@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zzz.mvc.Mappers.PostMapper">
+    <select id="addANewPost" parameterType="Post">
+        insert into Posts (Post_id, Post_by, Post_content, Post_time)
+        VALUES
+        (#{Post_id}, #{Post_by}, #{Post_content}, #{Post_time})
+    </select>
+
+    <select id="showAllPosts" resultType="Post">
+        select * from Posts ORDER BY Post_time DESC
+    </select>
+</mapper>
+
+        <!-- 在 sqlmapconfig 加载此mapper -->
