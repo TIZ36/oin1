@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function check(){
+        var x = document.getElementsByTagName('meta');
+        var c = x[0].getAttribute("charset");
+        //alert(c);
+        if(c == "utf-8")
+          alert("good, 你使用了utf-8");
+        else{
+          alert("bad");
+        }
+      }
+    </script>
+  </head>
+  <body onload="check()">
+    <a href="./demo12_1.html"> back </a>
+  </body>
+</html>

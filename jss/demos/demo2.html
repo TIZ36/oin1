@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title="js_practice1">
+    <script type="text/javascript">
+      function change(){
+        document.getElementById("t1").innerHTML = " good ";
+      }
+      function u(){
+        var c = document.getElementById('t2');
+        c.value = c.value.toUpperCase();
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="alert('hello')">click to alert</button> <!-- alert用于测试很方便-->
+    <br/>
+    <button onclick="change()">click to change inner html</button>
+    <p id="t1">bad</p>
+
+    <p>输入英文字母，离开时变成大写</p><input id="t2" onchange="u()"/>
+  </body>
+</html>

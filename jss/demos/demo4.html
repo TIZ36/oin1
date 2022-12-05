@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    function number_check(){
+      var x = document.getElementById("number_check").value;
+
+      if(x=='' || isNaN(x)){
+        alert("not number");
+      }else {
+        alert("is number");
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <input id="number_check"/>
+    <button onclick="number_check()"> click to check </button>
+  </body>
+</html>

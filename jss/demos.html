@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <iframe src="./note.html" width="100%" height="250px"></iframe> -->
+    <div style="text-align:center;"><h2> BaoOnHead </h2></div>
+    <div id="text" style="width:50%;height:300px;float:left;">
+      <div class="demo1">
+        <h4> 实现document.write： </h4>
+        <textarea style="width:90%;height:146px;">
+
+          <body>
+            <script type="text/javascript">
+              document.write("<h>hello</h>");
+              document.write("<p><em>javascript</em></p>");
+            </script>
+          </body>
+
+        </textarea>
+    </div>
+
+    <div class="demo2">
+      <h4> 简单 onclick onchange ：</h4>
+      <textarea style="width:90%;height:146px;">
+
+        <!DOCTYPE>
+        <html>
+          <meta charset="utf-8">
+          <head>
+            <title="js_practice1">
+            <script type="text/javascript">
+              function change(){
+                document.getElementById("t1").innerHTML = " good ";
+              }
+            </script>
+          </head>
+          <body>
+            <button onclick="alert('hello')">click to alert</button> <!-- alert用于测试很方便-->
+            <br/>
+            <button onclick="change()">click to change inner html</button>
+            <p id="t1">bad</p>
+          </body>
+        </html>
+
+      </textarea>
+  </div>
+
+  <div class="demo3">
+    <h4> 修改 img： </h4>
+    <textarea style="width:90%;height:146px;">
+      <!DOCTYPE>
+      <html>
+        <meta charset="utf-8">
+        <head>
+          <title="js_practice1">
+          <script type="text/javascript">
+            function changeBulb(){
+              var sts = document.getElementById("bulbimg");
+              reg = /(eg)*\_+(bulboff)+/;
+              msg = sts.src;
+
+              if(reg.test(msg)){                  // 存在就可以，即;这里也可以写 sts.src.match("bulboff")
+                sts.src = "eg_bulbon.gif";
+              }else{
+                sts.src = "eg_bulboff.gif"
+              }
+            }
+          </script>
+        </head>
+
+        <body>
+          <img width="25px" height="40px"id="bulbimg" onclick="changeBulb()" src="./eg_bulboff.gif" alt="bulb"/>    </body>
+      </html>
+
+    </textarea>
+</div>
+
+<div class="demo4">
+  <h4> 检测是不是number ： </h4>
+  <textarea style="width:90%;height:146px;">
+    ...
+    isNaN(x);
+    ...
+  </textarea>
+</div>
+
+<div class="demo5">
+  <h4> JavaScript 中的对象</h4>
+  <textarea style="width:90%;height:145px;">
+     <script>
+      var txt = "javascript";
+      //实际已经创建txt字符串对象，并可以使用很多方法
+     </script>
+  </textarea>
+</div>
+
+<div class="demo6">
+  <h4> 构建对象属性： </h4>
+  <textarea style="width:90%;height:146px;">
+    <script type="text/javascript">
+      function createOb(){
+        person = new Object();
+        person.firstname = "Tian" ;
+        person.lastname = "Zhang" ;
+        person.age = " 23 "       ;
+
+        alert(person.firstname + ',' + person.lastname + person.age);
+      }
+    </script>
+  </textarea>
+</div>
+<div class="demo7">
+  <h4> 代参数的函数 </h4>
+  <textarea style="width:90%;height:146px;">
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+          function showName(lastname, firstname){
+            document.getElementById("show").innerHTML = firstname + ',' + lastname ;
+          }
+        </script>
+      </head>
+      <body>
+        <p id="show"></p>
+        <button onclick="showName('zhang', 'tian')"> click </button>
+
+      </body>
+    </html>
+
+  </textarea>
+</div>
+
+<div class="demo8">
+  <h4> 带有返回值的函数 </h4>
+  <textarea style="width:90%;height:146px;">
+    //执行return 语句后当前函数就停止运行了，但是javascript会回到调用的地方继续执行
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+          function value(){
+            return 5;
+          }
+
+          function main(){
+            document.getElementById("dd").innerHTML = value();
+          }
+        </script>
+      </head>
+      <body>
+        <p id='dd'></p>
+        <button type="button" name="button" onclick="main()"> click </button>
+      </body>
+    </html>
+
+  </textarea>
+</div>
+
+<div class="demo9">
+  <h4> switch 区别</h4>
+  <textarea style="width:90%;height:146px;">
+    <script type="text/javascript">
+      function test(){
+        var key = document.getElementById('aa').value;
+        var Wes = "Wednesday";
+
+        switch (key) {
+          case "monday":
+              alert("monday");
+            break;
+          case "Tuesday":
+              alert("Tuesday");
+            break;
+          case Wes:
+              alert("Wednesday");
+            break;
+          default:
+            alert("try again");
+        }
+      }
+    </script>
+  </textarea>
+</div>
+<div class="demo10">
+  <h4> while,for 和 for in</h4>
+  <textarea style="width:90%;height:146px;">
+    <script>
+      var person = {firstname:'Tian', lastname:'zhang', age:'23'};
+      for(x in person){
+        document.write(person[x]);
+      }
+
+      document.write("<br/>");
+      var a = [1,2,3,4];
+      for(i=0; i < a.length; i++){
+        document.write(a[i]);
+      }
+    </script>
+  </textarea>
+</div>
+<div class="demo11">
+  <h4> try catch 运用：</h4>
+  <textarea style="width:90%;height:146px;">
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script>
+        var txt="";
+        function message()
+        {
+          try
+          {
+            alert(n);
+          }
+          catch(err)
+          {
+            txt+="错误描述：" + err.message + "\n\n";
+            alert(txt);
+          }
+        }
+        </script>
+    </head>
+
+    <body>
+    <input type="button" value="查看消息" onclick="message()" />
+    </body>
+
+    </html>
+
+  </textarea>
+</div>
+<div class="demo12">
+  <h4> 简单onload：</h4>
+  <textarea style="width:90%;height:146px;">
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+          function check(){
+            var x = document.getElementsByTagName('meta');
+            var c = x[0].getAttribute("charset");
+            //alert(c);
+            if(c == "utf-8")
+              alert("good, 你使用了utf-8");
+            else{
+              alert("bad");
+            }
+          }
+        </script>
+      </head>
+      <body onload="check()">
+        <a href="./demo12_1.html"> back </a>
+      </body>
+    </html>
+  </textarea>
+</div>
+
+<div class="demo13">
+  <h4> </h4>
+  <textarea style="width:90%;height:146px;">
+  </textarea>
+</div>
+<div class="demo14">
+  <h4> </h4>
+  <textarea style="width:90%;height:146px;">
+  </textarea>
+</div>
+<div class="demo15">
+  <h4> </h4>
+  <textarea style="width:90%;height:146px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:146px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:146px;">
+  </textarea>
+</div>
+
+
+
+
+    </div>
+
+    <div id="show" style="width:50%;height:300px;float:right;">
+      <div class="demo1">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo1.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo2">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo2.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo3">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo3.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo4">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo4.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo5">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo5.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo6">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo6.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo7">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo7.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo8">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo8.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo9">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo9.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo10">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo10.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo11">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo11.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo12">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo12_1.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo13">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo13.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo14">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo14.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo15">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo15.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo16">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo16.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo17">
+        <h4> 结果:</h4>
+        <iframe frameborder="0" src="./demos/demo17.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+    </div>
+  </body>
+</html>
