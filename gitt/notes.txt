@@ -1,0 +1,23 @@
+1. a easy way to config your github and local directory
+- sign up on github
+- create a new repository following the instructions on github
+open terminal if your use MacOS
+~ cd [where you want to clone your remote repository]
+~ git clone [url/which you can find on the github]
+done!
+
+2. how to use the git to change
+some helpful commend you should know:
+git push            // push you local change to the remote repository
+git pull            // git fetch + git merge
+git status          // check if there is something without commit
+git add             // add new files
+git commit -m "**"  // commit change
+git push --set-upstream origin [branch]               // if you cannot push
+git pull [url] [branch] --allow-unrelated-histories   // if you cannot pull
+git rm [file_name]  // git remove a file
+git checkout [branch]  // change to another branch
+
+Notices:
+a. if you or other contributers changed some part of the file of your repository, remember to git pull first
+and then git push to post your changes
